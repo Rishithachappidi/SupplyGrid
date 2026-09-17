@@ -1,0 +1,291 @@
+{
+  "checked_assertions": 6804703,
+  "failed_checks": {},
+  "first_failure_examples": {},
+  "scope": "Structural, conditional-null, reference and documented local-model checks. Not a full supply-chain simulation proof.",
+  "seed": 20260917,
+  "status": "PASS",
+  "tables": {
+    "01_suppliers.csv": {
+      "columns": 19,
+      "missing_by_column": {
+        "backup_available": 0,
+        "component_capacity": 0,
+        "country": 0,
+        "cyber_risk": 0,
+        "financial_risk": 0,
+        "geopolitical_risk": 0,
+        "latitude": 0,
+        "lead_time_days": 0,
+        "lead_time_std": 0,
+        "longitude": 0,
+        "on_time_rate": 0,
+        "quality_rate": 0,
+        "region": 0,
+        "reliability_score": 0,
+        "supplier_id": 0,
+        "supplier_name": 0,
+        "tier": 0,
+        "unit_cost": 0,
+        "weather_risk": 0
+      },
+      "rows": 100,
+      "sha256": "35473730986ea42a8be22c0dfb8781aabbaa1cc52f0ac2fadf69b96e81c0fba4"
+    },
+    "02_components.csv": {
+      "columns": 13,
+      "missing_by_column": {
+        "category": 0,
+        "component_id": 0,
+        "component_name": 0,
+        "criticality_score": 0,
+        "hazardous_flag": 0,
+        "lead_time_days": 0,
+        "maximum_supply": 0,
+        "minimum_order_qty": 0,
+        "safety_stock_units": 0,
+        "shelf_life_days": 0,
+        "substitutability_score": 0,
+        "supplier_id": 0,
+        "unit_cost": 0
+      },
+      "rows": 500,
+      "sha256": "f52d3f871e9b9135a17b9c6c7374219e9dbec8ee3ed8999275c98c6bcc1640b8"
+    },
+    "03_product_components.csv": {
+      "columns": 6,
+      "missing_by_column": {
+        "component_id": 0,
+        "component_role": 0,
+        "is_critical": 0,
+        "product_id": 0,
+        "quantity_required": 0,
+        "substitute_component_id": 1976
+      },
+      "rows": 5000,
+      "sha256": "9dd9b9b7e52d57969571f8fd1fd1f655b1cfbeb8f6c6dc4d3a7109a671b0c2f8"
+    },
+    "04_factories.csv": {
+      "columns": 14,
+      "missing_by_column": {
+        "country": 0,
+        "current_utilization": 0,
+        "factory_id": 0,
+        "factory_name": 0,
+        "labor_cost_per_unit": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "maximum_overtime": 0,
+        "operating_cost_per_unit": 0,
+        "production_capacity": 0,
+        "recovery_time_days": 0,
+        "region": 0,
+        "reliability_score": 0,
+        "storage_capacity": 0
+      },
+      "rows": 20,
+      "sha256": "106ec6bdc8a25ec96374f00731fcf2e4728d5cfd81e750e78397e400e4bfa938"
+    },
+    "05_products.csv": {
+      "columns": 11,
+      "missing_by_column": {
+        "category": 0,
+        "demand_mean": 0,
+        "demand_std": 0,
+        "factory_id": 0,
+        "priority_level": 0,
+        "product_id": 0,
+        "product_name": 0,
+        "production_cost": 0,
+        "production_time_hours": 0,
+        "profit_margin": 0,
+        "selling_price": 0
+      },
+      "rows": 100,
+      "sha256": "410c33189e38576c9ca9f53245270f3b787eafddbe2757194248d94827cc5c5c"
+    },
+    "06_warehouses.csv": {
+      "columns": 10,
+      "missing_by_column": {
+        "country": 0,
+        "handling_capacity": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "operating_cost": 0,
+        "region": 0,
+        "reliability_score": 0,
+        "storage_capacity": 0,
+        "warehouse_id": 0,
+        "warehouse_name": 0
+      },
+      "rows": 30,
+      "sha256": "0d336e7ed05b5de70e917960a5a6c2735f86983776cc95a868d661fd43dff4a7"
+    },
+    "07_inventory.csv": {
+      "columns": 14,
+      "missing_by_column": {
+        "available_quantity": 0,
+        "component_id": 500,
+        "holding_cost_per_unit": 0,
+        "inventory_age_days": 0,
+        "inventory_id": 0,
+        "last_updated_date": 0,
+        "maximum_stock": 0,
+        "product_id": 4500,
+        "quantity_on_hand": 0,
+        "reorder_point": 0,
+        "reserved_quantity": 0,
+        "safety_stock": 0,
+        "stockout_cost_per_unit": 0,
+        "warehouse_id": 0
+      },
+      "rows": 5000,
+      "sha256": "26520828ef593f0b5cb53153f7b0ebb589098bfa7c84e2b874145cc6899b0ec4"
+    },
+    "08_orders.csv": {
+      "columns": 11,
+      "missing_by_column": {
+        "customer_id": 0,
+        "order_date": 0,
+        "order_id": 0,
+        "order_status": 0,
+        "priority": 0,
+        "product_id": 0,
+        "quantity": 0,
+        "region": 0,
+        "required_date": 0,
+        "unit_price": 0,
+        "warehouse_id": 0
+      },
+      "rows": 100000,
+      "sha256": "41285a65cd76d66b006d08b81264a89550fb50583f18fc8f21ab8eb4df55660d"
+    },
+    "09_shipments.csv": {
+      "columns": 16,
+      "missing_by_column": {
+        "actual_arrival": 1375,
+        "component_id": 100000,
+        "delay_days": 0,
+        "destination_id": 0,
+        "dispatch_date": 0,
+        "distance_km": 0,
+        "expected_arrival": 0,
+        "order_id": 50000,
+        "origin_id": 0,
+        "product_id": 50000,
+        "quantity": 0,
+        "route_id": 0,
+        "shipment_id": 0,
+        "shipment_status": 0,
+        "transport_cost": 0,
+        "transport_mode": 0
+      },
+      "rows": 150000,
+      "sha256": "b6a5de03c8d7c2dc0ebf95ebbedcb8e3cbac3b4df5274c2616aac03b7fcca323"
+    },
+    "10_routes.csv": {
+      "columns": 13,
+      "missing_by_column": {
+        "alternative_route_available": 0,
+        "congestion_risk": 0,
+        "cost_per_unit": 0,
+        "destination_id": 0,
+        "distance_km": 0,
+        "estimated_transit_cost": 0,
+        "geopolitical_risk": 0,
+        "normal_transit_days": 0,
+        "origin_id": 0,
+        "route_capacity": 0,
+        "route_id": 0,
+        "transport_mode": 0,
+        "weather_risk": 0
+      },
+      "rows": 1000,
+      "sha256": "9993f061af7a48ce21925ad482d4733fb630b8746b2106683a2506a7019c04a8"
+    },
+    "11_disruptions.csv": {
+      "columns": 14,
+      "missing_by_column": {
+        "affected_quantity": 0,
+        "capacity_loss_percent": 0,
+        "delay_days": 0,
+        "disruption_id": 0,
+        "disruption_type": 0,
+        "duration_days": 0,
+        "entity_id": 0,
+        "entity_type": 0,
+        "probability": 0,
+        "recovery_time_days": 0,
+        "root_cause": 0,
+        "scenario_id": 0,
+        "severity": 0,
+        "start_time": 0
+      },
+      "rows": 20000,
+      "sha256": "9cc637e8e862c2b4db3144dae980e7be15fee15aa259f31581b1ff0474cce3b5"
+    },
+    "12_financial_impacts.csv": {
+      "columns": 16,
+      "missing_by_column": {
+        "additional_transport_cost": 0,
+        "alternative_supplier_cost": 0,
+        "disruption_id": 0,
+        "expedite_cost": 0,
+        "financial_impact_id": 0,
+        "inventory_holding_cost": 0,
+        "lost_revenue": 0,
+        "net_financial_impact": 0,
+        "penalty_cost": 0,
+        "production_loss_cost": 0,
+        "recoverable_value": 0,
+        "recovery_cost": 0,
+        "revenue_at_risk": 0,
+        "scenario_id": 0,
+        "stockout_cost": 0,
+        "total_cost": 0
+      },
+      "rows": 20000,
+      "sha256": "888b9871c36743b98b80bbc04437bc1a19d7f3b7bad4bcb70531ea4d057aa7ef"
+    },
+    "13_mitigation_actions.csv": {
+      "columns": 16,
+      "missing_by_column": {
+        "action_cost": 0,
+        "action_id": 0,
+        "action_type": 0,
+        "available_capacity": 0,
+        "component_id": 15000,
+        "destination_location": 10000,
+        "disruption_id": 0,
+        "factory_id": 0,
+        "feasible": 0,
+        "implementation_time": 0,
+        "risk_score": 0,
+        "route_id": 15000,
+        "source_location": 10000,
+        "success_probability": 0,
+        "supplier_id": 25000,
+        "time_saved_days": 0
+      },
+      "rows": 30000,
+      "sha256": "afa0e6e74bdc6bf0deed7bcc80f957f2974ce2821fe7af2a517ca0e3ccd6dca5"
+    },
+    "14_scenarios.csv": {
+      "columns": 10,
+      "missing_by_column": {
+        "affected_region": 0,
+        "demand_multiplier": 0,
+        "description": 0,
+        "duration_multiplier": 0,
+        "number_of_disruptions": 0,
+        "scenario_id": 0,
+        "scenario_name": 0,
+        "scenario_type": 0,
+        "severity_multiplier": 0,
+        "supply_multiplier": 0
+      },
+      "rows": 5000,
+      "sha256": "d05ce8335544eb6cb86dcbbaa08737ce067d4568122e48d070eff5f01c307605"
+    }
+  }
+}
