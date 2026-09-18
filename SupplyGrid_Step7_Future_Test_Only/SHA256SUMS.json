@@ -1,0 +1,15 @@
+{
+  "package.py": "5c0b735b2528a9732910d7efa8fa983e21bbed71e75226799c0e14645c3263cf",
+  "validate_test.py": "6bc96785a308115196bef869d935396dbd3456a4a48bb3f64987995e70ada8a8",
+  "README.md": "6e66e60f9743faa9cab409202638f044f34d08a54ac419399e38cc50525697f4",
+  "protocol.json": "53598865fc574d718684661c47140e00437477cbd367cd1c1447f517f28a02cf",
+  "run_future_test.py": "fdf55b280ffd7e39739e9ac71073c6bf24b33388013732327bca3d5737a18261",
+  "results/final_test_metrics.json": "e5cc755a0fe807336db12a4f99abb54fb62106aec2167eff2fba0be7639bfe32",
+  "results/final_test_predictions.csv": "466e61c4f745f21213ee0b2726f43d59d6ac3303ef71437778a8f4b5edb37893",
+  "results/FINAL_TEST_SUMMARY.md": "939106b17bfae5cc5dacb1292087f3127a0f7f3875ddfe0108bf5bbd159b3741",
+  "results/final_test_ranking.csv": "996852b6139fe253809140ffa9297a5631f38c106a9e3b519d3bec8cc7fba261",
+  "results/integrity_validation.json": "75245a638b7c8b632a7257d4b1c926ec39c9b8a178228806ea284bce08bd2bd0",
+  "data/new_disruption_events.csv": "f5de8bfc24522c87235ea3837ca8d4ed102c6292deff091298fea9f9d4ac8e6a",
+  "data/new_daily_observations.csv": "dc7226700f590303a8692fcd2c8019e7475f0fbb6aa6b640c15235eb7dcc3163",
+  "data/future_test.csv": "d06a18aac06e852c4a0906bdbc735c972089417881c4e53c05cd59eaf7e816be"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASSED",
+  "tests_run": 17,
+  "tests_expected": 17,
+  "skipped": 0,
+  "test_ids": [
+    "test_v2.RecoveryTests.test_complete_procurement_production_path_and_hand_cost",
+    "test_v2.RecoveryTests.test_dated_supplier_component_capacity_below_moq",
+    "test_v2.RecoveryTests.test_empty_exposure",
+    "test_v2.RecoveryTests.test_factory_inventory_not_double_used",
+    "test_v2.RecoveryTests.test_factory_shared_slots",
+    "test_v2.RecoveryTests.test_generation_reproducibility_and_refuse_overwrite",
+    "test_v2.RecoveryTests.test_independent_audit_rechecks_shared_capacities",
+    "test_v2.RecoveryTests.test_independent_audit_rejects_corrupted_plans",
+    "test_v2.RecoveryTests.test_invalid_data_rejected_before_optimization",
+    "test_v2.RecoveryTests.test_missing_inbound_route",
+    "test_v2.RecoveryTests.test_moq_surplus_is_paid_and_carried_not_order_coverage",
+    "test_v2.RecoveryTests.test_procurement_and_production_do_not_override_no_action_cost",
+    "test_v2.RecoveryTests.test_production_duration_blocks_late_path",
+    "test_v2.RecoveryTests.test_same_physical_substitute_cannot_satisfy_two_bom_roles_twice",
+    "test_v2.RecoveryTests.test_supplier_and_component_capacity_shared_across_factories",
+    "test_v2.RecoveryTests.test_supplier_disruption_capacity_is_applied_by_date",
+    "test_v2.RecoveryTests.test_unapproved_substitution_not_generated"
+  ],
+  "duration_seconds": 0.686,
+  "runtime": {
+    "python": "3.12.14",
+    "pandas": "3.0.6",
+    "networkx": "3.6.1",
+    "ortools": "9.15.6755"
+  },
+  "serialized_report_reaudits": [
+    {
+      "report": "s037_comparison.json",
+      "version": "v1",
+      "status": "PASSED",
+      "orders_protected": 36,
+      "total_cost_cents": 1262778
+    },
+    {
+      "report": "s037_comparison.json",
+      "version": "v2",
+      "status": "PASSED",
+      "orders_protected": 36,
+      "total_cost_cents": 1262778
+    },
+    {
+      "report": "s037_service_cost_sensitivity.json",
+      "version": "v1",
+      "status": "PASSED",
+      "orders_protected": 41,
+      "total_cost_cents": 30635054
+    },
+    {
+      "report": "s037_service_cost_sensitivity.json",
+      "version": "v2",
+      "status": "PASSED",
+      "orders_protected": 58,
+      "total_cost_cents": 26128127
+    }
+  ],
+  "original_14_csvs_byte_unchanged": true
+}

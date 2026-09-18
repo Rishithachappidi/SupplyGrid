@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "supplier_id",
+    "agent",
+    "status",
+    "data",
+    "evidence",
+    "actions_executed"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supplier_id": {
+      "type": "string",
+      "pattern": "^S[0-9]{3}$"
+    },
+    "agent": {
+      "const": "impact"
+    },
+    "status": {
+      "const": "SUCCEEDED"
+    },
+    "actions_executed": {
+      "const": false
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "tool",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "tool": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "supplier",
+        "capacity_loss_percent",
+        "duration_days",
+        "start_date",
+        "end_date_inclusive",
+        "exposure",
+        "eligible_orders",
+        "potential_order_ids"
+      ],
+      "properties": {
+        "supplier": {
+          "type": "string"
+        },
+        "capacity_loss_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "duration_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_date_inclusive": {
+          "type": "string",
+          "format": "date"
+        },
+        "exposure": {
+          "type": "object"
+        },
+        "eligible_orders": {
+          "type": "array"
+        },
+        "potential_order_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

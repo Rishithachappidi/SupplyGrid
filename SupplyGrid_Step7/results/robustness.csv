@@ -1,0 +1,4 @@
+feature,mean_risk_delta,fraction_increased,note
+weather_signal,0.021262547001242638,0.9046666666666666,"Illustrative sensitivity, not a causal or physically consistent scenario"
+congestion_signal,0.007107814308255911,0.49066666666666664,"Illustrative sensitivity, not a causal or physically consistent scenario"
+demand_pressure,0.0,0.0,"Illustrative sensitivity, not a causal or physically consistent scenario"

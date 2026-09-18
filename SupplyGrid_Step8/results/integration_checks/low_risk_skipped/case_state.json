@@ -1,0 +1,92 @@
+{
+  "case_id": "SG8-952628f2c7334e99aa78632d7628360e",
+  "status": "SKIPPED_LOW_RISK",
+  "scenario": {
+    "supplier_id": "S037",
+    "capacity_loss_percent": 80.0,
+    "duration_days": 10,
+    "assumed_delay_days": 10,
+    "daily_penalty_rate": "0.001",
+    "uncovered_unit_cost_cents": 0,
+    "route_capacity_mode": "single-batch",
+    "time_limit_seconds": 60,
+    "snapshot_what_if": true,
+    "analyze_low_risk_reason": ""
+  },
+  "messages": {
+    "risk": {
+      "case_id": "SG8-952628f2c7334e99aa78632d7628360e",
+      "supplier_id": "S037",
+      "agent": "risk",
+      "status": "SUCCEEDED",
+      "data": {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "disruption_probability": 0.07594231516122818,
+        "risk_rank": 67,
+        "risk_level": "LOW",
+        "horizon_days": 7,
+        "model_version": "SupplyGrid-XGBoost-single-v1",
+        "threshold": 0.1500730663537979,
+        "ranking_population": 98,
+        "explanations": [
+          {
+            "supplier_id": "S037",
+            "date": "2028-12-30",
+            "feature": "numeric__reliability_score",
+            "calibrated_log_odds_contribution": -0.07657185941934586,
+            "calibrated_baseline_log_odds": -2.29180908203125,
+            "direction": "decreases"
+          },
+          {
+            "supplier_id": "S037",
+            "date": "2028-12-30",
+            "feature": "numeric__days_since_onset",
+            "calibrated_log_odds_contribution": -0.06387073546648026,
+            "calibrated_baseline_log_odds": -2.29180908203125,
+            "direction": "decreases"
+          },
+          {
+            "supplier_id": "S037",
+            "date": "2028-12-30",
+            "feature": "numeric__weather_signal",
+            "calibrated_log_odds_contribution": 0.055072326213121414,
+            "calibrated_baseline_log_odds": -2.29180908203125,
+            "direction": "increases"
+          },
+          {
+            "supplier_id": "S037",
+            "date": "2028-12-30",
+            "feature": "numeric__delay_rate_7d",
+            "calibrated_log_odds_contribution": -0.03804020956158638,
+            "calibrated_baseline_log_odds": -2.29180908203125,
+            "direction": "decreases"
+          },
+          {
+            "supplier_id": "S037",
+            "date": "2028-12-30",
+            "feature": "numeric__financial_risk",
+            "calibrated_log_odds_contribution": -0.0345015674829483,
+            "calibrated_baseline_log_odds": -2.29180908203125,
+            "direction": "decreases"
+          }
+        ],
+        "confirmed_disruption": false,
+        "synthetic_model": true,
+        "probability_is_not_severity": true,
+        "human_review_required": true
+      },
+      "evidence": [
+        {
+          "tool": "risk_core",
+          "path": "/workspace/scratch/fef9999fbd7c/SupplyGrid_Step7/risk_core.py",
+          "sha256": "5d7c16ee4e0dea36f190e6a8e571f9d19faf845456590d6753cb5088dbafe724"
+        }
+      ],
+      "actions_executed": false
+    }
+  },
+  "actions_executed": false,
+  "human_review_required": true,
+  "scope": "Conditional what-if analysis; not confirmed causal loss or executed recovery"
+}

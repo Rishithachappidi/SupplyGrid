@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "check": "date mismatch blocks downstream tools",
+      "status": "PASSED"
+    },
+    {
+      "check": "actual low risk skips downstream tools",
+      "status": "PASSED"
+    },
+    {
+      "check": "independent audit rejects duplicate selected recovery path",
+      "status": "PASSED"
+    },
+    {
+      "check": "production/procurement pathway sensitivity obeys independent V2 audit",
+      "status": "PASSED",
+      "protected_orders": 58,
+      "production_orders": 17,
+      "selected_procurement_lots": 0,
+      "conditional_objective_usd": "261281.27"
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "actions_executed": false,
+  "scope": "Explicit historical what-if; production run adds USD 500 per unresolved unit as a synthetic service-cost sensitivity"
+}

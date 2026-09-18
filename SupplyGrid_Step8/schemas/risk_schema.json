@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "supplier_id",
+    "agent",
+    "status",
+    "data",
+    "evidence",
+    "actions_executed"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supplier_id": {
+      "type": "string",
+      "pattern": "^S[0-9]{3}$"
+    },
+    "agent": {
+      "const": "risk"
+    },
+    "status": {
+      "const": "SUCCEEDED"
+    },
+    "actions_executed": {
+      "const": false
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "tool",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "tool": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "supplier_id",
+        "date",
+        "disruption_probability",
+        "risk_rank",
+        "risk_level",
+        "threshold",
+        "horizon_days",
+        "confirmed_disruption",
+        "explanations"
+      ],
+      "properties": {
+        "supplier_id": {
+          "type": "string",
+          "pattern": "^S[0-9]{3}$"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "disruption_probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "risk_level": {
+          "enum": [
+            "HIGH",
+            "LOW"
+          ]
+        },
+        "horizon_days": {
+          "const": 7
+        },
+        "confirmed_disruption": {
+          "const": false
+        },
+        "explanations": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}

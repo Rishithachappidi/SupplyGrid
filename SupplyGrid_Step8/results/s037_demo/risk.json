@@ -1,0 +1,71 @@
+{
+  "case_id": "SG8-515a1c846bf94519b52243512c35bd6b",
+  "supplier_id": "S037",
+  "agent": "risk",
+  "status": "SUCCEEDED",
+  "data": {
+    "supplier_id": "S037",
+    "date": "2028-12-30",
+    "disruption_probability": 0.07594231516122818,
+    "risk_rank": 67,
+    "risk_level": "LOW",
+    "horizon_days": 7,
+    "model_version": "SupplyGrid-XGBoost-single-v1",
+    "threshold": 0.1500730663537979,
+    "ranking_population": 98,
+    "explanations": [
+      {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "feature": "numeric__reliability_score",
+        "calibrated_log_odds_contribution": -0.07657185941934586,
+        "calibrated_baseline_log_odds": -2.29180908203125,
+        "direction": "decreases"
+      },
+      {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "feature": "numeric__days_since_onset",
+        "calibrated_log_odds_contribution": -0.06387073546648026,
+        "calibrated_baseline_log_odds": -2.29180908203125,
+        "direction": "decreases"
+      },
+      {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "feature": "numeric__weather_signal",
+        "calibrated_log_odds_contribution": 0.055072326213121414,
+        "calibrated_baseline_log_odds": -2.29180908203125,
+        "direction": "increases"
+      },
+      {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "feature": "numeric__delay_rate_7d",
+        "calibrated_log_odds_contribution": -0.03804020956158638,
+        "calibrated_baseline_log_odds": -2.29180908203125,
+        "direction": "decreases"
+      },
+      {
+        "supplier_id": "S037",
+        "date": "2028-12-30",
+        "feature": "numeric__financial_risk",
+        "calibrated_log_odds_contribution": -0.0345015674829483,
+        "calibrated_baseline_log_odds": -2.29180908203125,
+        "direction": "decreases"
+      }
+    ],
+    "confirmed_disruption": false,
+    "synthetic_model": true,
+    "probability_is_not_severity": true,
+    "human_review_required": true
+  },
+  "evidence": [
+    {
+      "tool": "risk_core",
+      "path": "/workspace/scratch/fef9999fbd7c/SupplyGrid_Step7/risk_core.py",
+      "sha256": "5d7c16ee4e0dea36f190e6a8e571f9d19faf845456590d6753cb5088dbafe724"
+    }
+  ],
+  "actions_executed": false
+}

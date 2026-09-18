@@ -1,0 +1,14 @@
+{
+  "extend_dataset_v2.py": "f8b650a9393a6d4dee46449fdfede34617c5722d259fc8c61657e2dfc89d1ddd",
+  "optimize_mitigation_v2.py": "4a98aad64da940253cd6bd2a3c877ff8bb1136574abbb790948e1e787ee7dd84",
+  "test_v2.py": "fec3d06ca1af83f680093048436ff84e8bcfd5df39ab1192432eaa92fc025a07",
+  "data_v2/15_factory_component_inventory.csv": "5d73a92d062a8cea8360d7aba75a99a0d7d3008457af1fe5a689013619859d95",
+  "data_v2/16_factory_capacity_calendar.csv": "2cc355fbb72f24cf916d8d1ae8f5df3eded1e6950757a92f48553c714930b3f1",
+  "data_v2/17_supplier_capacity_calendar.csv": "c0a170883e60bb206a4952582e3dc4ee6c4473b6e5e85ad475d6cb300f02da2c",
+  "data_v2/validation_report_v2.json": "0add204556d44152ca231353c64bd598e39628eec4b978c4e3417fcf45ff4af9",
+  "step6_v2_reports/s037_comparison.json": "e25d321a3621ad24419b9fdf27fee5858fc7d82720f31e76b07ea967bdeae409",
+  "step6_v2_reports/s037_service_cost_sensitivity.json": "89569155130381c2ef9a0d126b7d459702efa75411f7a4381a48f57ca12a3625",
+  "step6_v2_reports/tests_v2.json": "bbe6a3de0f065c879a8f325905dfc5a3ae6fb54995b258cbcde68d250eee0145",
+  "requirements_v2.txt": "a7bfe1979c16a4b383243a04c6a954e2fdce157bfcc2400fc1d6a86f859c0bd8",
+  "README_STEP6_V2.md": "f34f715f6557bab80a7f979176a173f3104f2b97974052b33553e06516264911"
+}

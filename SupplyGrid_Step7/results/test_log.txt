@@ -1,0 +1,19 @@
+test_additive_explanation (test_step7.Step7Tests.test_additive_explanation) ... ok
+test_alert_cap (test_step7.Step7Tests.test_alert_cap) ... ok
+test_all_targets (test_step7.Step7Tests.test_all_targets) ... ok
+test_corrupted_inputs (test_step7.Step7Tests.test_corrupted_inputs) ... ok
+test_missing_column_rejected (test_step7.Step7Tests.test_missing_column_rejected) ... ok
+test_no_final_test_claim (test_step7.Step7Tests.test_no_final_test_claim) ... ok
+test_no_future_features (test_step7.Step7Tests.test_no_future_features) ... ok
+test_one_model (test_step7.Step7Tests.test_one_model) ... ok
+test_probabilities_reload (test_step7.Step7Tests.test_probabilities_reload) ... ok
+test_rank_reset_multiple_dates (test_step7.Step7Tests.test_rank_reset_multiple_dates) ... ok
+test_ranks (test_step7.Step7Tests.test_ranks) ... ok
+test_seen_final_period_rejected (test_step7.Step7Tests.test_seen_final_period_rejected) ... ok
+test_temporal_selection (test_step7.Step7Tests.test_temporal_selection) ... ok
+test_train_only_scaler (test_step7.Step7Tests.test_train_only_scaler) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.658s
+
+OK

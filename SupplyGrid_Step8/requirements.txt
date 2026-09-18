@@ -1,0 +1,10 @@
+# Match the trusted, frozen Step 7 model's serialization environment.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost-cpu==3.4.1
+joblib==1.6.0
+networkx==3.6.1
+ortools==9.15.6755
+jsonschema==4.26.0

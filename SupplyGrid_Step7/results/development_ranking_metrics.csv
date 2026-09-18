@@ -1,0 +1,5 @@
+k,precision_at_k,recall_at_k,lift_over_random_ranking,hits,alerts,aggregation
+1,0.09278350515463918,0.009656652360515022,0.9152873723448933,9,97,micro counts across dates; random expected hits account for daily prevalence and cohort size
+5,0.10721649484536082,0.055793991416309016,1.0576654080429884,52,485,micro counts across dates; random expected hits account for daily prevalence and cohort size
+10,0.13298969072164948,0.13841201716738197,1.3119119003610145,129,970,micro counts across dates; random expected hits account for daily prevalence and cohort size
+20,0.1422680412371134,0.296137339055794,1.4034406375955037,276,1940,micro counts across dates; random expected hits account for daily prevalence and cohort size

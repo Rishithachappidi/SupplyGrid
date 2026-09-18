@@ -1,0 +1,229 @@
+{
+  "candidate_search": [
+    {
+      "candidate": 0,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 0.01,
+        "weight": "none"
+      },
+      "mean_temporal_ap": 0.10436944772524759,
+      "fold_ap": [
+        0.10367017823621764,
+        0.10874579748171828,
+        0.10069236745780687
+      ]
+    },
+    {
+      "candidate": 1,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 0.01,
+        "weight": "full"
+      },
+      "mean_temporal_ap": 0.10528416327173924,
+      "fold_ap": [
+        0.10576744794467319,
+        0.10917673909060044,
+        0.10090830277994409
+      ]
+    },
+    {
+      "candidate": 2,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 0.1,
+        "weight": "none"
+      },
+      "mean_temporal_ap": 0.10405814445968285,
+      "fold_ap": [
+        0.1042383679242714,
+        0.10797182349621826,
+        0.09996424195855891
+      ]
+    },
+    {
+      "candidate": 3,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 0.1,
+        "weight": "full"
+      },
+      "mean_temporal_ap": 0.10517991650784984,
+      "fold_ap": [
+        0.10601894173505597,
+        0.10892760826312065,
+        0.10059319952537292
+      ]
+    },
+    {
+      "candidate": 4,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 1.0,
+        "weight": "none"
+      },
+      "mean_temporal_ap": 0.10407337446179761,
+      "fold_ap": [
+        0.10428426836341723,
+        0.10799544030125957,
+        0.09994041472071603
+      ]
+    },
+    {
+      "candidate": 5,
+      "spec": {
+        "family": "LogisticRegression",
+        "C": 1.0,
+        "weight": "full"
+      },
+      "mean_temporal_ap": 0.10516237068615654,
+      "fold_ap": [
+        0.10605107794869992,
+        0.10887417872523183,
+        0.1005618553845379
+      ]
+    },
+    {
+      "candidate": 6,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 1,
+        "weight": "none"
+      },
+      "mean_temporal_ap": 0.10967473081572504,
+      "fold_ap": [
+        0.1089902981517152,
+        0.1064825232273264,
+        0.11355137106813352
+      ]
+    },
+    {
+      "candidate": 7,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 1,
+        "weight": "mild"
+      },
+      "mean_temporal_ap": 0.1086310001711101,
+      "fold_ap": [
+        0.10705506305137569,
+        0.10636078544719693,
+        0.1124771520147577
+      ]
+    },
+    {
+      "candidate": 8,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 1,
+        "weight": "full"
+      },
+      "mean_temporal_ap": 0.10907357266672146,
+      "fold_ap": [
+        0.10630626735377893,
+        0.10690463317628253,
+        0.11400981747010291
+      ]
+    },
+    {
+      "candidate": 9,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 2,
+        "weight": "none"
+      },
+      "mean_temporal_ap": 0.10268442328995014,
+      "fold_ap": [
+        0.10446426221913888,
+        0.10306600910988531,
+        0.10052299854082623
+      ]
+    },
+    {
+      "candidate": 10,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 2,
+        "weight": "mild"
+      },
+      "mean_temporal_ap": 0.10282635948824086,
+      "fold_ap": [
+        0.1045382794558219,
+        0.10243355938232081,
+        0.10150723962657981
+      ]
+    },
+    {
+      "candidate": 11,
+      "spec": {
+        "family": "XGBoost",
+        "depth": 2,
+        "weight": "full"
+      },
+      "mean_temporal_ap": 0.10533357289101526,
+      "fold_ap": [
+        0.10598263320573928,
+        0.10344053260864346,
+        0.10657755285866308
+      ]
+    }
+  ],
+  "winner": {
+    "candidate": 6,
+    "spec": {
+      "family": "XGBoost",
+      "depth": 1,
+      "weight": "none"
+    },
+    "mean_temporal_ap": 0.10967473081572504,
+    "fold_ap": [
+      0.1089902981517152,
+      0.1064825232273264,
+      0.11355137106813352
+    ]
+  },
+  "selection_rule": "maximum mean AP across three expanding temporal folds inside train; tie candidate order",
+  "folds": [
+    {
+      "train_end": "2027-07-29",
+      "train_label_end": "2027-08-05",
+      "validation_start": "2027-08-06",
+      "validation_end": "2027-10-07",
+      "train_rows": 17055,
+      "validation_rows": 6014
+    },
+    {
+      "train_end": "2027-09-30",
+      "train_label_end": "2027-10-07",
+      "validation_start": "2027-10-08",
+      "validation_end": "2027-12-10",
+      "train_rows": 23087,
+      "validation_rows": 6135
+    },
+    {
+      "train_end": "2027-12-03",
+      "train_label_end": "2027-12-10",
+      "validation_start": "2027-12-11",
+      "validation_end": "2028-02-08",
+      "train_rows": 29208,
+      "validation_rows": 5794
+    }
+  ],
+  "threshold": 0.1500730663537979,
+  "threshold_rule": "maximize validation recall subject to false-alert cap; tie smaller FPR then higher threshold",
+  "provisional_false_alert_cap": 0.05,
+  "cap_requires_business_review": true,
+  "calibration_partition": "calibration",
+  "probability_calibration": "sigmoid",
+  "benchmark_test_evaluated": false,
+  "final_test_status": "PENDING genuinely unseen future history; existing periods are development evidence",
+  "source_last_observed_date": "2028-12-30",
+  "data_sha256": {
+    "inference_features.csv": "1956a43c621f20c625a7565f23e84e9510b55fbb9806218eef96fe1489fc5e38",
+    "ml_dataset.csv": "a1957df9fa296b5e9ad036e8306a9ebcc70e7f4ce64161f4189375d255a0ce73"
+  },
+  "model_sha256": "c75807c121ea3e0ee14b9fddc1a613e2958b524e540c3dd288c88035a3267ec4",
+  "synthetic": true,
+  "integration_performed": false
+}

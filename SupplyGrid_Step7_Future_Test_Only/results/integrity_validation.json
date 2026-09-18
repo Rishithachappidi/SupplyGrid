@@ -1,0 +1,14 @@
+{
+  "software_data_integrity": "PASS",
+  "row_counts_read_from_csv": {
+    "forecast_rows": 16428,
+    "prediction_rows": 16428,
+    "new_observation_rows": 18000,
+    "new_event_rows": 252
+  },
+  "all_labels_independently_reconstructed": true,
+  "complete_followup": true,
+  "model_package_unchanged": true,
+  "predictive_performance_gate": "NOT CERTIFIED: no business acceptance limits supplied",
+  "real_world_validation": false
+}

@@ -1,0 +1,90 @@
+{
+  "status": "PASSED",
+  "actual_row_counts": {
+    "15_factory_component_inventory.csv": 4496,
+    "16_factory_capacity_calendar.csv": 620,
+    "17_supplier_capacity_calendar.csv": 15500
+  },
+  "actual_column_counts": {
+    "15_factory_component_inventory.csv": 10,
+    "16_factory_capacity_calendar.csv": 8,
+    "17_supplier_capacity_calendar.csv": 12
+  },
+  "snapshot_date": "2027-01-01",
+  "calendar_days": 31,
+  "calendar_end": "2027-01-31",
+  "validated_route_types": {
+    "supplier_to_factory": 200,
+    "factory_to_warehouse": 600,
+    "warehouse_to_warehouse": 200
+  },
+  "checks": [
+    "schemas/no NULLs",
+    "unique primary keys",
+    "supplier/factory/component foreign keys",
+    "BOM/substitute approval",
+    "route endpoints/types/costs",
+    "inventory balances/storage limits",
+    "integer quantities",
+    "snapshot/contiguous calendar coverage",
+    "shared supplier totals/commitments",
+    "factory capacity balances",
+    "cost decomposition"
+  ],
+  "original_csv_sha256": {
+    "01_suppliers.csv": "35473730986ea42a8be22c0dfb8781aabbaa1cc52f0ac2fadf69b96e81c0fba4",
+    "02_components.csv": "f52d3f871e9b9135a17b9c6c7374219e9dbec8ee3ed8999275c98c6bcc1640b8",
+    "03_product_components.csv": "9dd9b9b7e52d57969571f8fd1fd1f655b1cfbeb8f6c6dc4d3a7109a671b0c2f8",
+    "04_factories.csv": "106ec6bdc8a25ec96374f00731fcf2e4728d5cfd81e750e78397e400e4bfa938",
+    "05_products.csv": "410c33189e38576c9ca9f53245270f3b787eafddbe2757194248d94827cc5c5c",
+    "06_warehouses.csv": "0d336e7ed05b5de70e917960a5a6c2735f86983776cc95a868d661fd43dff4a7",
+    "07_inventory.csv": "26520828ef593f0b5cb53153f7b0ebb589098bfa7c84e2b874145cc6899b0ec4",
+    "08_orders.csv": "41285a65cd76d66b006d08b81264a89550fb50583f18fc8f21ab8eb4df55660d",
+    "09_shipments.csv": "b6a5de03c8d7c2dc0ebf95ebbedcb8e3cbac3b4df5274c2616aac03b7fcca323",
+    "10_routes.csv": "9993f061af7a48ce21925ad482d4733fb630b8746b2106683a2506a7019c04a8",
+    "11_disruptions.csv": "9cc637e8e862c2b4db3144dae980e7be15fee15aa259f31581b1ff0474cce3b5",
+    "12_financial_impacts.csv": "888b9871c36743b98b80bbc04437bc1a19d7f3b7bad4bcb70531ea4d057aa7ef",
+    "13_mitigation_actions.csv": "afa0e6e74bdc6bf0deed7bcc80f957f2974ce2821fe7af2a517ca0e3ccd6dca5",
+    "14_scenarios.csv": "d05ce8335544eb6cb86dcbbaa08737ce067d4568122e48d070eff5f01c307605"
+  },
+  "original_files_unchanged": true,
+  "generation_seed": 20260918,
+  "original_actual_row_counts": {
+    "01_suppliers.csv": 100,
+    "02_components.csv": 500,
+    "03_product_components.csv": 5000,
+    "04_factories.csv": 20,
+    "05_products.csv": 100,
+    "06_warehouses.csv": 30,
+    "07_inventory.csv": 5000,
+    "08_orders.csv": 100000,
+    "09_shipments.csv": 150000,
+    "10_routes.csv": 1000,
+    "11_disruptions.csv": 20000,
+    "12_financial_impacts.csv": 20000,
+    "13_mitigation_actions.csv": 30000,
+    "14_scenarios.csv": 5000
+  },
+  "original_actual_column_counts": {
+    "01_suppliers.csv": 19,
+    "02_components.csv": 13,
+    "03_product_components.csv": 6,
+    "04_factories.csv": 14,
+    "05_products.csv": 11,
+    "06_warehouses.csv": 10,
+    "07_inventory.csv": 14,
+    "08_orders.csv": 11,
+    "09_shipments.csv": 16,
+    "10_routes.csv": 13,
+    "11_disruptions.csv": 14,
+    "12_financial_impacts.csv": 16,
+    "13_mitigation_actions.csv": 16,
+    "14_scenarios.csv": 10
+  },
+  "extension_csv_sha256": {
+    "15_factory_component_inventory.csv": "5d73a92d062a8cea8360d7aba75a99a0d7d3008457af1fe5a689013619859d95",
+    "16_factory_capacity_calendar.csv": "2cc355fbb72f24cf916d8d1ae8f5df3eded1e6950757a92f48553c714930b3f1",
+    "17_supplier_capacity_calendar.csv": "c0a170883e60bb206a4952582e3dc4ee6c4473b6e5e85ad475d6cb300f02da2c"
+  },
+  "regeneration_byte_identical": true
+}

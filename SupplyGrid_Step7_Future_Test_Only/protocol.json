@@ -1,0 +1,27 @@
+{
+  "seed": 20260920,
+  "observation_days": 180,
+  "synthetic": true,
+  "cutoff": "2028-12-30",
+  "start": "2028-12-31",
+  "model_sha256": "c75807c121ea3e0ee14b9fddc1a613e2958b524e540c3dd288c88035a3267ec4",
+  "threshold": 0.1500730663537979,
+  "model_name": "XGBoost",
+  "primary_metrics": [
+    "average_precision",
+    "precision",
+    "recall",
+    "f1",
+    "brier",
+    "false_alert_rate",
+    "daily_precision_at_k",
+    "daily_recall_at_k",
+    "daily_lift"
+  ],
+  "tuning_allowed": false,
+  "calibration_allowed": false,
+  "threshold_changes_allowed": false,
+  "generator": "Same documented AR(1)/stochastic onset process, continued from last observed supplier state; new fixed random stream.",
+  "performance_acceptance_limits": "Not supplied by user; no automatic predictive pass or deployment certification.",
+  "independence": "Future random innovations/new onset draws not previously generated or inspected for model/feature decisions; same synthetic mechanism and same suppliers."
+}

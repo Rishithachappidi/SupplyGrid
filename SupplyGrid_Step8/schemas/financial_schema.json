@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "supplier_id",
+    "agent",
+    "status",
+    "data",
+    "evidence",
+    "actions_executed"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supplier_id": {
+      "type": "string",
+      "pattern": "^S[0-9]{3}$"
+    },
+    "agent": {
+      "const": "financial"
+    },
+    "status": {
+      "const": "SUCCEEDED"
+    },
+    "actions_executed": {
+      "const": false
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "tool",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "tool": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "currency",
+        "scope",
+        "incremental_disruption_loss",
+        "breakdown",
+        "detail",
+        "evaluated_orders"
+      ],
+      "properties": {
+        "currency": {
+          "const": "USD"
+        },
+        "scope": {
+          "const": "Conditional scenario exposure, NOT identified disruption-caused loss"
+        },
+        "incremental_disruption_loss": {
+          "type": "null"
+        },
+        "breakdown": {
+          "type": "object"
+        },
+        "detail": {
+          "type": "array"
+        },
+        "evaluated_orders": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
