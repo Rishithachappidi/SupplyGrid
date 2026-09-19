@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETED_ONCE",
+  "synthetic_only": true,
+  "forecast_origin_start": "2029-06-29",
+  "forecast_origin_end": "2029-12-18",
+  "observed_start": "2029-06-29",
+  "observed_end": "2029-12-25",
+  "n": 16404,
+  "positives": 1621,
+  "prevalence": 0.09881736161911729,
+  "average_precision": 0.12085232644952168,
+  "roc_auc": 0.5706123540958125,
+  "brier": 0.08876915217964823,
+  "accuracy": 0.8595464520848574,
+  "precision": 0.14315569487983282,
+  "recall": 0.08451573103022826,
+  "f1": 0.10628394103956555,
+  "false_alert_rate": 0.05546911993506054,
+  "tp": 137,
+  "fp": 820,
+  "tn": 13963,
+  "fn": 1484,
+  "baseline_ap": 0.09881736161911729,
+  "ranking": [
+    {
+      "k": 1,
+      "precision_at_k": 0.11560693641618497,
+      "recall_at_k": 0.012338062924120914,
+      "lift_over_random": 1.1710819676588744
+    },
+    {
+      "k": 5,
+      "precision_at_k": 0.13410404624277455,
+      "recall_at_k": 0.0715607649599013,
+      "lift_over_random": 1.3584550824842945
+    },
+    {
+      "k": 10,
+      "precision_at_k": 0.1416184971098266,
+      "recall_at_k": 0.15114127082048118,
+      "lift_over_random": 1.4345754103821213
+    },
+    {
+      "k": 20,
+      "precision_at_k": 0.1361271676300578,
+      "recall_at_k": 0.2905613818630475,
+      "lift_over_random": 1.3789490169183247
+    }
+  ],
+  "expected_disruption_cost": "UNAVAILABLE: no event-level causal loss labels and dated matching operational state",
+  "downstream_mitigation_change": "NOT EVALUATED: 2027 operations cannot support 2029 forecast simulation",
+  "score_interpretation": "Frozen V2 evaluated on new synthetic future after prior exposed future period; NOT new enterprise evidence"
+}

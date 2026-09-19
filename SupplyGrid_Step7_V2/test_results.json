@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_corrupted_input (test_v2.Step7V2Tests.test_corrupted_input) ... ok\ntest_future_labels_reconstructed_independently (test_v2.Step7V2Tests.test_future_labels_reconstructed_independently) ... ok\ntest_future_report_consistency (test_v2.Step7V2Tests.test_future_report_consistency) ... ok\ntest_model_metadata_checksum (test_v2.Step7V2Tests.test_model_metadata_checksum) ... ok\ntest_native_serialization (test_v2.Step7V2Tests.test_native_serialization) ... ok\ntest_probability_and_stable_contract (test_v2.Step7V2Tests.test_probability_and_stable_contract) ... ok\ntest_probability_calibration_and_reproducibility (test_v2.Step7V2Tests.test_probability_calibration_and_reproducibility) ... ok\ntest_purged_chronology (test_v2.Step7V2Tests.test_purged_chronology) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 10.371s\n\nOK\n"
+}

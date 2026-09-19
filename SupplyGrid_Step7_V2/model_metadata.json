@@ -1,0 +1,194 @@
+{
+  "model_version": "SupplyGrid-XGBoost-native-v2",
+  "artifact_format": "XGBoost JSON booster + independent sklearn preprocessor and sigmoid calibrator",
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0"
+  },
+  "training_seed": 20260919,
+  "features": [
+    "reliability_score",
+    "financial_risk",
+    "geopolitical_risk",
+    "weather_risk",
+    "cyber_risk",
+    "component_capacity",
+    "lead_time_days",
+    "lead_time_std",
+    "component_count",
+    "downstream_product_count",
+    "downstream_factory_count",
+    "route_count",
+    "graph_degree",
+    "weather_signal",
+    "congestion_signal",
+    "demand_pressure",
+    "utilization",
+    "delay_rate_7d",
+    "onsets_30d",
+    "completed_duration_mean_90d",
+    "days_since_onset",
+    "region"
+  ],
+  "target": "New supplier disruption onset in T+1 through T+7 inclusive, given supplier state through T; exclude active disruptions",
+  "date_ranges": {
+    "train": {
+      "start": "2027-01-31",
+      "end": "2028-02-08",
+      "last_label_end": "2028-02-15",
+      "rows": 35672
+    },
+    "calibration": {
+      "start": "2028-02-16",
+      "end": "2028-05-22",
+      "last_label_end": "2028-05-29",
+      "rows": 9261
+    },
+    "validation": {
+      "start": "2028-05-30",
+      "end": "2028-09-03",
+      "last_label_end": "2028-09-10",
+      "rows": 9186
+    },
+    "test": {
+      "start": "2028-09-11",
+      "end": "2028-12-23",
+      "last_label_end": "2028-12-30",
+      "rows": 9904
+    },
+    "future_evaluation": "NOT GENERATED when this model was frozen; see sealed_future_test.json"
+  },
+  "hyperparameters": {
+    "n_estimators": 160,
+    "learning_rate": 0.035,
+    "subsample": 0.85,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "max_depth": 1,
+    "min_child_weight": 50,
+    "reg_lambda": 5
+  },
+  "model_selection": "8 XGBoost candidates, best mean AP over 3 purged expanding train folds",
+  "selection_trials": [
+    {
+      "config": {
+        "max_depth": 1,
+        "min_child_weight": 20,
+        "reg_lambda": 5
+      },
+      "fold_ap": [
+        0.10749495143734963,
+        0.10416631449670354,
+        0.11226500109437973
+      ],
+      "mean_ap": 0.10797542234281095
+    },
+    {
+      "config": {
+        "max_depth": 1,
+        "min_child_weight": 20,
+        "reg_lambda": 20
+      },
+      "fold_ap": [
+        0.1072631750505416,
+        0.10540062420552271,
+        0.11000695278227092
+      ],
+      "mean_ap": 0.10755691734611174
+    },
+    {
+      "config": {
+        "max_depth": 1,
+        "min_child_weight": 50,
+        "reg_lambda": 5
+      },
+      "fold_ap": [
+        0.10818601455127787,
+        0.10629643094167182,
+        0.11103969346159989
+      ],
+      "mean_ap": 0.10850737965151654
+    },
+    {
+      "config": {
+        "max_depth": 1,
+        "min_child_weight": 50,
+        "reg_lambda": 20
+      },
+      "fold_ap": [
+        0.1076944212953738,
+        0.10732052458782855,
+        0.11000695278227092
+      ],
+      "mean_ap": 0.10834063288849109
+    },
+    {
+      "config": {
+        "max_depth": 2,
+        "min_child_weight": 20,
+        "reg_lambda": 5
+      },
+      "fold_ap": [
+        0.10684113943512341,
+        0.10031304950488093,
+        0.09793621209356565
+      ],
+      "mean_ap": 0.10169680034452333
+    },
+    {
+      "config": {
+        "max_depth": 2,
+        "min_child_weight": 20,
+        "reg_lambda": 20
+      },
+      "fold_ap": [
+        0.10571147994471888,
+        0.10161511627177548,
+        0.09938505784956816
+      ],
+      "mean_ap": 0.10223721802202083
+    },
+    {
+      "config": {
+        "max_depth": 2,
+        "min_child_weight": 50,
+        "reg_lambda": 5
+      },
+      "fold_ap": [
+        0.10878117661051326,
+        0.10093946497309245,
+        0.10254771533700581
+      ],
+      "mean_ap": 0.1040894523068705
+    },
+    {
+      "config": {
+        "max_depth": 2,
+        "min_child_weight": 50,
+        "reg_lambda": 20
+      },
+      "fold_ap": [
+        0.10715473516299794,
+        0.10231036869853781,
+        0.10259517856755968
+      ],
+      "mean_ap": 0.10402009414303182
+    }
+  ],
+  "calibration": "sigmoid fit on separate calibration period",
+  "threshold": 0.14922574162483215,
+  "threshold_rule": "Maximize validation recall subject to 5.00% false-alert-rate cap",
+  "historical_source": "Original frozen Step7 synthetic supplier-day features; no new observed enterprise dataset",
+  "source_data_sha256": "a1957df9fa296b5e9ad036e8306a9ebcc70e7f4ce64161f4189375d255a0ce73",
+  "model_checksum": "9b133b5b5b8be765ed560df20ce9ef9048ee279cd3bc3197c08d2b85cedd6df0",
+  "checksums": {
+    "model/xgboost_model.json": "9b133b5b5b8be765ed560df20ce9ef9048ee279cd3bc3197c08d2b85cedd6df0",
+    "model/preprocessor.joblib": "64821b93addf95f8bbfe01fcd06a8b97cd6ef773497ca0a88cf0f95a301514ac",
+    "model/calibrator.joblib": "b27d8f3db6bc623c84cbbde7f4fbb3e4efaa0851dd1ad9d8cded5467810e61f7"
+  },
+  "known_previous_future_test": "2028-12-31 to 2029-06-28 was previously inspected and is NOT an untouched final test for this V2"
+}

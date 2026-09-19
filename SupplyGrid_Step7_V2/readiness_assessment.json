@@ -1,0 +1,26 @@
+{
+  "forecast_date_ranges": {
+    "future_origin_start": "2029-06-29",
+    "future_origin_end": "2029-12-18",
+    "future_observed_start": "2029-06-29",
+    "future_observed_end": "2029-12-25"
+  },
+  "assessment": "Not certified for autonomous operational use",
+  "known_constraints": [
+    "Synthetic supplier history and labels",
+    "Average precision only modestly above event prevalence",
+    "Low recall at frozen 5% development-validation false-alert cap",
+    "No causal dollar-loss labels or matching dated operational state",
+    "Old Step 8 requires an explicit V2 adapter and separate temporal validation"
+  ],
+  "measured": {
+    "average_precision": 0.12085232644952168,
+    "prevalence": 0.09881736161911729,
+    "recall": 0.08451573103022826,
+    "precision": 0.14315569487983282,
+    "false_alert_rate": 0.05546911993506054,
+    "brier": 0.08876915217964823,
+    "roc_auc": 0.5706123540958125
+  },
+  "deployment_ready": false
+}

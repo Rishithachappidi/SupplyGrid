@@ -1,0 +1,62 @@
+{
+  "status": "DEVELOPMENT_ONLY",
+  "winning_config": {
+    "config": {
+      "max_depth": 1,
+      "min_child_weight": 50,
+      "reg_lambda": 5
+    },
+    "fold_ap": [
+      0.10818601455127787,
+      0.10629643094167182,
+      0.11103969346159989
+    ],
+    "mean_ap": 0.10850737965151654
+  },
+  "validation": {
+    "n": 9186,
+    "positives": 932,
+    "prevalence": 0.10145874156324843,
+    "average_precision": 0.1291464524150185,
+    "roc_auc": 0.5946020059463951,
+    "brier": 0.09055386112246969,
+    "accuracy": 0.8607663836272589,
+    "precision": 0.13473684210526315,
+    "recall": 0.06866952789699571,
+    "f1": 0.09097370291400142,
+    "false_alert_rate": 0.04979403925369518,
+    "tp": 64,
+    "fp": 411,
+    "tn": 7843,
+    "fn": 868
+  },
+  "ranking": [
+    {
+      "k": 1,
+      "precision_at_k": 0.08247422680412371,
+      "recall_at_k": 0.008583690987124463,
+      "lift_over_random": 0.8135887754176829
+    },
+    {
+      "k": 5,
+      "precision_at_k": 0.11134020618556702,
+      "recall_at_k": 0.05793991416309013,
+      "lift_over_random": 1.0983448468138726
+    },
+    {
+      "k": 10,
+      "precision_at_k": 0.13298969072164948,
+      "recall_at_k": 0.13841201716738197,
+      "lift_over_random": 1.3119119003610145
+    },
+    {
+      "k": 20,
+      "precision_at_k": 0.13762886597938145,
+      "recall_at_k": 0.286480686695279,
+      "lift_over_random": 1.357676268978259
+    }
+  ],
+  "alert_cap": 0.05,
+  "baseline_ap": 0.10145874156324843,
+  "warning": "Do not select new thresholds/features using sealed future results"
+}

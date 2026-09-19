@@ -1,0 +1,12 @@
+{
+  "seed": 20261019,
+  "days": 180,
+  "cutoff": "2029-06-28",
+  "generator": "documented same synthetic mechanism; new random stream",
+  "train_model_hash": "9b133b5b5b8be765ed560df20ce9ef9048ee279cd3bc3197c08d2b85cedd6df0",
+  "threshold": 0.14922574162483215,
+  "policies_locked_before_generation": true,
+  "no_retuning_after_test": true,
+  "known_previous_test": "2028-12-31 through 2029-06-28 already inspected: used only as chronological context",
+  "limitations": "Same synthetic simulator and supplier pool, no real-enterprise generalization or statistically independent rows"
+}
